@@ -27,11 +27,12 @@ class ProfileController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'house_number' => 'required',
+            // 'house_number' => 'required',
             'street' => 'required',
             'barangay' => 'required',
-            'city' => 'required',
-            'province' => 'required',
+            // 'city' => 'required',
+            // 'province' => 'required',
+            'formatted_address' => 'required',
             'zipcode' => 'required',
             'location' => 'required',
         ]);
@@ -47,8 +48,9 @@ class ProfileController extends Controller
             'house_number' => $request['house_number'],
             'street' => $request['street'],
             'barangay' => $request['barangay'],
-            'city' => $request['city'],
-            'province' => $request['province'],
+            // 'city' => $request['city'],
+            // 'province' => $request['province'],
+            'formatted_address' => $request['formatted_address'],
             'zipcode' => $request['zipcode'],
             'location' => $request['location'],
         ]);
@@ -79,11 +81,12 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $request->validate([
-            'house_number' => 'required',
+            // 'house_number' => 'required',
             'street' => 'required',
             'barangay' => 'required',
-            'city' => 'required',
-            'province' => 'required',
+            // 'city' => 'required',
+            // 'province' => 'required',
+            'formatted_address' => 'required',
             'zipcode' => 'required',
             'location' => 'required',
         ]);
@@ -92,8 +95,9 @@ class ProfileController extends Controller
             'house_number' => $request['house_number'],
             'street' => $request['street'],
             'barangay' => $request['barangay'],
-            'city' => $request['city'],
-            'province' => $request['province'],
+            // 'city' => $request['city'],
+            // 'province' => $request['province'],
+            'formatted_address' => $request['formatted_address'],
             'zipcode' => $request['zipcode'],
             'location' => $request['location'],
         ]);

@@ -15,8 +15,9 @@ class Profile extends Model
         'house_number', 
         'street', 
         'barangay',
-        'city', 
-        'province', 
+        // 'city', 
+        // 'province', 
+        'formatted_address',
         'zipcode',
         'location',
     ];

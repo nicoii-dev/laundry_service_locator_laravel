@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Service;
 use App\Models\Shop;
+use App\Models\User;
+
 class SearchController extends Controller
 {
     /**
@@ -41,7 +43,8 @@ class SearchController extends Controller
     
     public function index()
     {
-        //
+        $query = Service::with('shop')->get();
+        return response()->json(['services' => $query], 200);
     }
 
     /**
@@ -50,9 +53,10 @@ class SearchController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function getLabandero(Request $request)
     {
-        //
+        $query = User::with('profile')->get();
+        return response()->json(['labandero' => $query], 200);
     }
 
     /**

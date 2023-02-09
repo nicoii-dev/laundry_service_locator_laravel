@@ -58,8 +58,20 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
 
         Route::group(['prefix' => 'search'], function () {
             Route::post('/', 'SearchController@search');
+            Route::get('/all', 'SearchController@index');
+            Route::get('/labandero', 'SearchController@getLabandero');
             // Route::post('view', 'ProfileController@show');
             // Route::post('update', 'ProfileController@update');
+        });
+
+        Route::group(['prefix' => 'dashboard'], function () {
+            Route::get('/', 'DashboardController@index');
+        });
+
+        Route::group(['prefix' => 'users'], function () {
+            Route::get('/', 'UserController@index');
+            Route::post('activate/{id}', 'UserController@activateUser');
+            Route::post('deactivate/{id}', 'UserController@deactivateUser');
         });
     });
 

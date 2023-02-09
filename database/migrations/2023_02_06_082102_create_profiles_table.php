@@ -20,8 +20,9 @@ return new class extends Migration
             $table->string("house_number")->nullable();
             $table->string("street");
             $table->string("barangay");
-            $table->string("city");
-            $table->string("province");
+            // $table->string("city");
+            // $table->string("province");
+            $table->string("formatted_address");
             $table->string("zipcode");
             $table->string("location");
             $table->timestamps();
